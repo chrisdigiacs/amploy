@@ -6,7 +6,7 @@ import { AiFillHome, AiOutlineUser } from "react-icons/ai"
 export const SidebarData = [
     {
         title: 'Home',
-        path: '/',
+        path: '/Cards',
         icon: <AiFillHome />,
         cName: 'nav-text'
     },
