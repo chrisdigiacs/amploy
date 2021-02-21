@@ -8,7 +8,8 @@ import Navbar from './components/Navbar'
 
 import './App.css';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-//import Home from './pages/Home';
+import Main from './components/Main';
+import EmployerSignUp from './components/EmployerSignUp';
 import Account from './pages/Account';
 import Cards from './components/Cards';
 
