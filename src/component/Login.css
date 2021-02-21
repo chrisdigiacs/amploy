@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+input,button{
+
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.App{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+form .innerForm{
+
+    color: rgb(11, 49, 20);
+}
+
+form .innerForm h1{
+
+    color: rgb(11, 49, 20);
+    font-size: 85px;
+    margin-bottom: 65px;
+}
+
+form .innerForm h2 {
+    margin-bottom: 15px;
+}
+
+form .innerForm .formGroup {
+
+    display: block;
+    width: 300px;
+    margin-bottom: 15px;
+
+}
+
+form .innerForm .formGroup label{
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.4ms;
+}
+
+form .innerForm .formGroup input{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgb(168, 238, 215);
+    border-radius: 8px;
+    transition: 0.4ms;
+}
+
+form .innerForm .formGroup input:focus{
+
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+form .innerForm input[type = "submit"] {
+
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: darkgreen;
+    color: white;
+    font-weight: 600;
+    margin-right: 25px;
+}
+form .innerForm input[type = "submit"]:hover {
+
+    background-position: 100% 0%;
+}
