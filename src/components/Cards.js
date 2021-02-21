@@ -1,15 +1,24 @@
 import React, {useState} from 'react'
 import TinderCard from "react-tinder-card"
 import "./Cards.css"
+import "./EmpyButtons.css";
+import CheckIcon from '@material-ui/icons/Check';
+import IconButton from "@material-ui/core/IconButton"
+import ClearIcon from '@material-ui/icons/Clear';
 
 function Cards() {
     const[people, setPeople] = useState([
         {
             name: 'Chris Pereira',
-            url: "https://binaries.templates.cdn.office.net/support/templates/en-us/lw00002110_quantized.png",
-        }
+            url: "https://upload.wikimedia.org/wikipedia/commons/9/90/Resume_logo.jpeg",
+        },
+        {
+            name: 'Ryan Messervey',
+            url: "https://www.resumecoach.com/wp-content/themes/cv-wp-theme-resumecoach/library/images/slider/cf/toronto.png",
+        },
 
     ]);
+
 
     const swiped = (direction, nameToDelete) => {
         console.log("swiped on:" + nameToDelete);
@@ -41,7 +50,20 @@ function Cards() {
                 </TinderCard>
             )) }
             </div>
+            
+            <div className='empyButtons'>
+            <IconButton> 
+            <ClearIcon style={{ fontSize: 40 }} className="empyButtons__clearIcon"/> Decline
+            </IconButton>
+
+            
+            <IconButton> 
+            <CheckIcon style={{ fontSize: 40 }} className="empyButtons__checkIcon"/> Accept
+            </IconButton>
+
         </div>
+        </div>
+        
     )
 }
 
