@@ -1,23 +1,42 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import TinderCard from "react-tinder-card"
 import "./Cards.css"
 import "./EmpyButtons.css";
 import CheckIcon from '@material-ui/icons/Check';
 import IconButton from "@material-ui/core/IconButton"
 import ClearIcon from '@material-ui/icons/Clear';
+import axios from "./axios";
 
 function Cards() {
     const[people, setPeople] = useState([
         {
-            name: 'Chris Pereira',
-            url: "https://upload.wikimedia.org/wikipedia/commons/9/90/Resume_logo.jpeg",
+            name:"Chris Pereira",
+            imgUrl: "https://upload.wikimedia.org/wikipedia/commons/9/90/Resume_logo.jpeg"
         },
         {
-            name: 'Ryan Messervey',
-            url: "https://www.resumecoach.com/wp-content/themes/cv-wp-theme-resumecoach/library/images/slider/cf/toronto.png",
+            name:"Ryan Messervey",
+            imgUrl: "https://www.resumecoach.com/wp-content/themes/cv-wp-theme-resumecoach/library/images/slider/cf/toronto.png"
+        },
+        {
+            name:"Luca Catalfamo",
+            imgUrl: "https://cdn-images.resumelab.com/pages/layout_resumelab_3.png"
+        },
+        {
+            name:"Chris Digiacomo",
+            imgUrl: "https://www.jobscan.co/wp-content/uploads/exec.png"
         },
 
     ]);
+       
+    useEffect(() => {
+        async function fetchData(){
+            const req = await axios.get("/amploy/cards");
+
+            setPeople(req.data);
+        }
+
+        fetchData();
+    }, [])
 
 
     const swiped = (direction, nameToDelete) => {
@@ -41,7 +60,7 @@ function Cards() {
                  onCardLeftScreen={() => outOfWindow( person.name)}
                  >
                      <div
-                    style={{backgroundImage: "url("+person.url+")"}}
+                    style={{backgroundImage: "url("+person.imgUrl+")"}}
                     className="card"
                     >
                     <h2>{person.name}</h2>
