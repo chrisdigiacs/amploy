@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
@@ -15,3 +16,27 @@
   font-size: 1.5rem;
   
 }
+
+.App{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(aquamarine, rgb(223, 184, 140));
+  color: rgb(11, 49, 20);
+}
+
+.h1{
+  color: rgb(11, 49, 20);
+  font-size: 85px;
+  margin-bottom: 65px;
+}
+
+input,button{
+
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+}
+
