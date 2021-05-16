@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Amploy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Amploy is a web application that lets users apply to jobs in their domain of choice at the swipe of a finger. Conversely, the app allows employers to accept and setup an interview or simply decline an applicant at the swipe of a finger.
 
 ## Available Scripts
 
